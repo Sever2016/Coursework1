@@ -8,8 +8,8 @@ public class Main {
         employeeBook.printEmployees(employeeBook.getStorage());
         System.out.println();
         System.out.println(employeeBook.countSalaryExpenses(employeeBook.getStorage()) + " рублей - затраты на ЗП в месяц.");
-        System.out.println(employeeBook.foundMinSalaryId(employeeBook.getStorage()) + " - id сотрудника с минимальной зарплатой.");
-        System.out.println(employeeBook.foundMaxSalaryId(employeeBook.getStorage()) + " - id сотрудника с максимальной зарплатой.");
+        System.out.println("Сотрудник с минимальной зарплатой - " + employeeBook.foundMinSalaryEmployee(employeeBook.getStorage()));
+        System.out.println("Сотрудник с максимальной зарплатой - " + employeeBook.foundMaxSalaryEmployee(employeeBook.getStorage()));
         System.out.println(employeeBook.countAverageSalary(employeeBook.getStorage()) + " рублей - средняя зарплата сотрудников.");
         System.out.println();
         employeeBook.printEmployeesFullName(employeeBook.getStorage());
@@ -19,8 +19,8 @@ public class Main {
         double percentageIncrease = 25;
         int departmentNumber = 2;
         employeeBook.indexSalary(employeeBook.getStorage(), percentageIncrease);
-        System.out.println(employeeBook.foundMinSalaryIdInDepartment(employeeBook.getStorage(), departmentNumber) + " - id сотрудника с минимальной зарплатой в отделе № " + departmentNumber);
-        System.out.println(employeeBook.foundMaxSalaryIdInDepartment(employeeBook.getStorage(), departmentNumber) + " - id сотрудника с максимальной зарплатой в отделе № " + departmentNumber);
+        System.out.println("Сотрудник с минимальной зарплатой в отделе - " + employeeBook.foundMinSalaryEmployeeInDepartment(employeeBook.getStorage(), departmentNumber));
+        System.out.println("Сотрудник с максимальной зарплатой в отделе - " + employeeBook.foundMaxSalaryEmployeeInDepartment(employeeBook.getStorage(), departmentNumber));
         System.out.println(employeeBook.countSalaryExpensesInDepartment(employeeBook.getStorage(), departmentNumber) + " рублей - траты на зарплату у " + departmentNumber + "-го отдела.");
         System.out.println("Средняя зарплата " + departmentNumber + "-го отдела: " + employeeBook.countAverageSalaryInDepartment(employeeBook.getStorage(), departmentNumber));
         employeeBook.indexSalaryInDepartment(employeeBook.getStorage(), departmentNumber, percentageIncrease);
